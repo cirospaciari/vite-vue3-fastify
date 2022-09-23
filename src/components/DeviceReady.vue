@@ -16,6 +16,7 @@ function onDeviceReady() {
 
 //Só mantive para mostrar funcionalidade do onUnmounted e reactive essa logica de device ready é só no cordova mesmo
 document.addEventListener('DOMContentLoaded', onDeviceReady, false);
+if (document.readyState !== "loading") { onDeviceReady() }
 
 onUnmounted(() => {
     document.removeEventListener('DOMContentLoaded', onDeviceReady)
